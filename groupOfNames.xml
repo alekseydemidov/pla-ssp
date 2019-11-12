@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE template SYSTEM "template.dtd">
+
+<template>
+<askcontainer>1</askcontainer>
+<description>New GroupOfNames</description>
+<icon>ldap-ou.png</icon>
+<invalid>0</invalid>
+<rdn>cn</rdn>
+<!-- <regexp>^ou=.*,</regexp> -->
+<title>Generic: Group of Names</title>
+<visible>1</visible>
+
+<objectClasses>
+<objectClass id="groupOfNames"></objectClass>
+<objectClass id="top"></objectClass>
+</objectClasses>
+
+<attributes>
+<attribute id="cn">
+	<display>Group name</display>
+	<order>1</order>
+	<page>1</page>
+</attribute>
+<attribute id="member">
+	<display>Members</display>
+	<order>2</order>
+	<page>1</page>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="businessCategory">
+	<display>businessCategory</display>
+	<order>3</order>
+	<page>1</page>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="description">
+	<display>Description</display>
+	<icon>light.png</icon>
+	<order>4</order>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="o">
+    <hidden>1</hidden>
+	<display>o</display>
+	<order>5</order>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="ou">
+    <hidden>1</hidden>
+	<display>ou</display>
+	<order>6</order>
+	<spacer>1</spacer>
+</attribute>
+</attributes>
+
+</template>
+
+
