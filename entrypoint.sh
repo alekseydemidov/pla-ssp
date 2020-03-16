@@ -106,7 +106,7 @@ sed -i -e "s|\$use_pwnedpasswords.*|\$use_pwnedpasswords = $USE_PWNEDPASSWORD;|g
 sed -i -e "s|\$pwd_show_policy.*|\$pwd_show_policy = \"$PWD_SHOW_POLICY\";|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$pwd_show_policy_pos.*|\$pwd_show_policy_pos = \"$PWD_SHOW_POLICY_POS\";|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$who_change_password.*|\$who_change_password = \"$WHO_CHANGE_PASSWORD\";|g" /usr/share/self-service-password/conf/config.inc.php
-sed -i -e "s|\$change_sshkey.*|\$change_sshkey = $CHANGE_SSHKEY;|g" /usr/share/self-service-password/conf/config.inc.php
+sed -i -e "s|\$change_sshkey =.*|\$change_sshkey = $CHANGE_SSHKEY;|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$change_sshkey_attribute.*|\$change_sshkey_attribute = \"$CHANGE_SSHKEY_ATTRIBUTE\";|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$who_change_sshkey.*|\$who_change_sshkey = \"$WHO_CHANGE_SSHKEY\";|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$use_questions.*|\$use_questions = $USE_QUESTIONS;|g" /usr/share/self-service-password/conf/config.inc.php
