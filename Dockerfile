@@ -1,6 +1,6 @@
 FROM nginx
 LABEL maintainer='Alexey Demidov <ademidov.info@gmail.com>'
-ARG PHPLDAPADMIN_VERSION=1.2.4
+ARG PHPLDAPADMIN_VERSION=1.2.5
 ARG PHP_VERSION=7.3
 RUN apt-get update && apt-get install -y --no-install-recommends \
     openssl \
