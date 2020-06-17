@@ -114,12 +114,12 @@ sed -i -e "s|\$use_tokens.*|\$use_tokens = $USE_TOKENS;|g" /usr/share/self-servi
 sed -i -e "s|\$crypt_tokens.*|\$crypt_tokens = $CRYPT_TOKENS;|g" /usr/share/self-service-password/conf/config.inc.php
 
 sed -i -e "s|\$mail_address_use_ldap.*|\$mail_address_use_ldap = $MAIL_ADDRESS_USE_LDAP;|g" /usr/share/self-service-password/conf/config.inc.php
-sed -i -e "s|\$mail_from.*|\$mail_from = \"$MAIL_FROM\";|g" /usr/share/self-service-password/conf/config.inc.php
+sed -i -e "s|\$mail_from =.*|\$mail_from = \"$MAIL_FROM\";|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$mail_from_name.*|\$mail_from_name = \"$MAIL_FROM_NAME\";|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$mail_sendmailpath.*|\$mail_sendmailpath = \"$MAIL_SENDMAILPATH\";|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$mail_smtp_debug.*|\$mail_smtp_debug = $MAIL_SMTP_DEBUG;|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$mail_smtp_host.*|\$mail_smtp_host = \"$MAIL_SMTP_HOST\";|g" /usr/share/self-service-password/conf/config.inc.php
-sed -i -e "s|\$mail_smtp_auth.*|\$mail_smtp_auth = \"$MAIL_SMTP_AUTH\";|g" /usr/share/self-service-password/conf/config.inc.php
+sed -i -e "s|\$mail_smtp_auth.*|\$mail_smtp_auth = $MAIL_SMTP_AUTH;|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$mail_smtp_user.*|\$mail_smtp_user = \"$MAIL_SMTP_USER\";|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$mail_smtp_pass.*|\$mail_smtp_pass = \"$MAIL_SMTP_PASS\";|g" /usr/share/self-service-password/conf/config.inc.php
 sed -i -e "s|\$mail_smtp_port.*|\$mail_smtp_port = $MAIL_SMTP_PORT;|g" /usr/share/self-service-password/conf/config.inc.php
