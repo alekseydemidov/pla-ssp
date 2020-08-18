@@ -3,6 +3,7 @@
 echo "Init environment variables"
 
 DEBUG_MODE=${DEBUG_MODE:-false}
+NGINX_SERVER_VERSION=${NGINX_SERVER_VERSION:-'off'}
 LDAP_URL=${LDAP_URL:-'ldap://localhost'}
 LDAP_STARTTLS=${LDAP_STARTTLS:-false}
 LDAP_USER_DN=${LDAP_USER_DN:-'cn=admin,dc=example,dc=com'}
@@ -58,6 +59,12 @@ PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME=${PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_C
 PHPLDAPADMIN_LDAP_HOSTS=${PHPLDAPADMIN_LDAP_HOSTS:-'localhost'}
 
 if [ ! -f /etc/.init ]; then
+echo "Configure Nginx"
+if [ "${NGINX_SERVER_VERSION,,}" == "on" ]; then
+sed -i -e "s|server_tokens off;|server_tokens on;|g" /etc/nginx/conf.d/pla-nginx.conf
+sed -i -e "s|server_tokens off;|server_tokens on;|g" /etc/nginx/conf.d/ssp-nginx.conf
+fi
+
 echo "Configure phpLDAPadmin"
 
 rm -rf /usr/share/phpldapadmin/templates/creation/sendmail*
