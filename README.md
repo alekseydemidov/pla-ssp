@@ -21,6 +21,7 @@ VARIABLE = default (if not set)
 
 ## Common variables:  
 DEBUG_MODE = false  
+NGINX_SERVER_VERSION = 'off' `activate nginx option server_tokens = on/off`   
 LDAP_URL = 'ldap://localhost'  
 LDAP_STARTTLS = false  
 LDAP_USER_DN = 'cn=admin,dc=example,dc=com'  
@@ -28,7 +29,7 @@ LDAP_USER_PASSWORD = 'secret'
 LDAP_BASE_DN = 'dc=example,dc=com'  
 LDAP_LOGIN_ATTRIBUTE = 'uid'  
 LDAP_FULLNAME_ATTRIBUTE = 'cn'  
-LDAP_FILTER = '(\\&(objectClass=posixAccount)(uid={login}))'  Pay attention backslash is mandatory!  
+LDAP_FILTER = '(\\&(objectClass=posixAccount)(uid={login}))' `Pay attention backslash is mandatory!`  
 
 ## phpLDAPadmin variables:  
 PHPLDAPADMIN_LDAP_BASE = 'dc=example,dc=com'  
@@ -79,3 +80,7 @@ BACKGROUND_IMAGE = 'images/unsplash-space.jpeg'
 
 
 Hyperlink to [dockerhub images](https://hub.docker.com/r/netflyer/openldap-ui)
+
+## Updating:
+*V1.2*   
+Add option server_tokens as a variable NGINX_SERVER_VERSION   
